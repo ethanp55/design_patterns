@@ -18,7 +18,7 @@ case class MallardDuck(var flyBehavior: FlyBehavior, var quackBehavior: QuackBeh
 }
 
 case class ModelDuck(var flyBehavior: FlyBehavior, var quackBehavior: QuackBehavior) extends Duck {
-  def this() = this(new FlyNoWay(), new Quack())
+  def this() = this(new FlyNoWay(), new MuteQuack())
 
   override def display(): Unit = println("I'm a model duck")
 }
